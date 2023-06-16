@@ -2,7 +2,7 @@ export const websiteJsonLd = {
 	'@context': 'http://schema.org',
 	'@type': 'WebSite',
 	name: 'JacobHerper.com',
-	alternateName: 'Jacob Herper',
+	alternateName: 'Akhmad Ramadani',
 	url: 'https://jacobherper.com/',
 	description:
 		'Front-End Software Engineer with a focus on React.js and TypeScript. I have more than 12 years experience working in software engineering.',
@@ -15,7 +15,7 @@ export const personJsonLd = {
 	'@type': 'Person',
 	image:
 		'https://res.cloudinary.com/jacobherper/image/upload/v1587315576/jacob_herper.jpg',
-	name: 'Jacob Herper',
+	name: 'Akhmad Ramadani',
 	alternateName: 'JakeHerp',
 	url: 'https://jacobherper.com/',
 	jobTitle: [
@@ -79,7 +79,7 @@ export const personJsonLd = {
 			name: 'Software Engineer',
 			alternateName: 'Front-End Engineer',
 		},
-		{ '@type': 'Brand', name: 'JakeHerp', alternateName: 'Jacob Herper' },
+		{ '@type': 'Brand', name: 'JakeHerp', alternateName: 'Akhmad Ramadani' },
 	],
 	memberOf: [
 		{

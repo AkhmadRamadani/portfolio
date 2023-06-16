@@ -3,7 +3,7 @@ import { Container } from '@components/atoms/Container';
 import { ContactForm } from '@components/molecules/ContactForm';
 
 export const metadata = {
-	title: 'Contact Jacob Herper - Software Engineer in the UK',
+	title: 'Contact Akhmad Ramadani - Software Engineer in the UK',
 	description:
 		'This is a comprehensive list of tech equipment and software I use for my day-to-day work as a software engineer in the UK.',
 };

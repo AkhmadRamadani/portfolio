@@ -15,7 +15,7 @@ const getData = async () => {
 };
 
 export const metadata = {
-	title: 'Jacob Herper uses ...',
+	title: 'Akhmad Ramadani uses ...',
 	description:
 		'This is a comprehensive list of tech equipment and software I use for my day-to-day work as a software engineer in the UK.',
 };

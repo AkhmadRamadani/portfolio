@@ -25,7 +25,7 @@ const getData = async (slug: string) => {
 export const generateMetadata = async ({ params }: PageProps) => {
 	const post = await getData(params.slug);
 	return {
-		title: `${post?.title} - Jacob Herper's Blog`,
+		title: `${post?.title} - Akhmad Ramadani's Blog`,
 		description: post?.seoDescription,
 	};
 };

@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 export const metadata = {
 	title:
-		'About Jacob Herper, a Senior Software Engineer and Consultant in the UK',
+		'About Akhmad Ramadani, a Senior Software Engineer and Consultant in the UK',
 	description:
 		'As a passionate front-end software developer, I create amazing websites and web apps to make the internet a better place.',
 };
@@ -41,7 +41,7 @@ const AboutPage = async () => {
 		<AnimatePage>
 			<Container>
 				<h1 className="headline mt-8 text-3xl md:text-5xl lg:text-6xl">
-					Hey, I&apos;m Jacob Herper
+					Hey, I&apos;m Akhmad Ramadani
 				</h1>
 				<h2 className="mt-2 text-xl font-bold md:text-2xl">
 					Senior Software Engineer from the UK

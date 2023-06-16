@@ -10,7 +10,7 @@ exports[`Logo renders correctly 1`] = `
       style="opacity: 0; transform: translateY(-10px) translateZ(0);"
     >
       <img
-        alt="Vectorised image of Jacob Herper"
+        alt="Vectorised image of Akhmad Ramadani"
         class="h-12 w-12"
         data-nimg="1"
         decoding="async"
@@ -24,12 +24,12 @@ exports[`Logo renders correctly 1`] = `
       <span
         class="opacity-100 transition duration-300 group-hover:opacity-0"
       >
-        @jakeherp
+        @akhmdrmdni
       </span>
       <span
         class="absolute left-16 from-blue-400 to-blue-700 opacity-0 transition duration-300 group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:text-transparent group-hover:opacity-100"
       >
-        Jacob Herper
+        Akhmad Ramadani
       </span>
     </div>
   </a>

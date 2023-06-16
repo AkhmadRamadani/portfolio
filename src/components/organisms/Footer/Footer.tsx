@@ -11,7 +11,7 @@ const Footer = () => {
 	return (
 		<footer className="mt-8 py-8 md:mt-20">
 			<Container className="flex justify-between">
-				<span>&copy; {new Date().getFullYear()} Jacob Herper</span>
+				<span>&copy; {new Date().getFullYear()} Akhmad Ramadani</span>
 				<SocialIcons
 					profiles={[
 						{

@@ -10,7 +10,7 @@ import type { Post } from '@types';
 import { format } from 'date-fns';
 
 export const metadata = {
-	title: 'Software Engineering Blog by Jacob Herper',
+	title: 'Software Engineering Blog by Akhmad Ramadani',
 	description:
 		'I try to make an effort to document my journey as a software developer in the form of blog posts. Here you find some of the articles I published over the years.',
 };

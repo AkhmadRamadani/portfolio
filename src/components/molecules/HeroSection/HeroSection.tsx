@@ -5,18 +5,14 @@ import Link from 'next/link';
 
 export const HeroSection = () => {
 	const talkAbout = [
+		'Flutter',
 		'React',
 		'JavaScript',
-		'TypeScript',
-		'GraphQL',
-		'Redux',
-		'Jamstack',
-		'Next.js',
-		'RESTful APIs',
-		'HTML',
-		'CSS',
-		'Gatsby',
-		'Svelte',
+		'Java',
+		'Kotlin',
+		'SQL',
+		'Laravel',
+		'Node.js'
 	];
 
 	return (
@@ -29,22 +25,23 @@ export const HeroSection = () => {
 			<div className="mx-auto max-w-7xl px-6 lg:px-8 lg:py-32">
 				<div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
 					<h1 className="headline max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl lg:col-span-2 xl:col-auto">
-						Hey, I&apos;m Jacob Herper
+						Hey, I&apos;m Akhmad Ramadani
 					</h1>
 					<div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
 						<p className="text-lg leading-8 text-slate-600 dark:text-off-white">
-							I am a passionate Software Engineer, specialised in front-end
-							development using React and TypeScript. As an advocate for web
-							performance and accessibility and an evangelist for the Jamstack,
-							I create amazing web applications to make the internet a better
-							place.
+							I am a passionate Software Engineer, specializing in Mobile Development, 
+							particularly with a focus on using Flutter. 
+							As an advocate for mobile app performance and user experience, 
+							I strive to create exceptional mobile applications that bring value to users. 
+							With a deep understanding of Flutter's capabilities, 
+							I am dedicated to leveraging its power to build innovative and user-friendly mobile experiences.
 							<br />
 							You can talk to me about <TypeWriter strings={talkAbout} />.
 						</p>
 						<p className="text-lg leading-8 text-slate-600 dark:text-off-white">
-							P.S. this website is open-source and available on{' '}
+							Look deep into my work at{' '}
 							<a
-								href="https://github.com/jakeherp/portfolio"
+								href="https://github.com/akhmadramadani"
 								title="Link to Github repository"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -70,8 +67,8 @@ export const HeroSection = () => {
 						</div>
 					</div>
 					<Image
-						src="/assets/jacob.jpg"
-						alt="Photo of Jacob Herper"
+						src="/assets/ramafix3.png"
+						alt="Photo of Akhmad Ramadani"
 						height={300}
 						width={450}
 						loading="eager"

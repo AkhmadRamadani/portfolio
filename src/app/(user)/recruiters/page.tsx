@@ -12,7 +12,7 @@ import { salaryQuery } from '@queries/salary';
 import type { Page, Salary as SalaryRange } from '@types';
 
 export const metadata = {
-	title: 'Recruiter Information about Jacob Herper',
+	title: 'Recruiter Information about Akhmad Ramadani',
 	description:
 		'Thank you for your interest in me for software engineering roles you are hiring for.',
 };

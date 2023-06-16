@@ -1,6 +1,6 @@
-# Jacob Herper Portfolio
+# Akhmad Ramadani Portfolio
 
-![Jacob Herper - Software Engineer and Consultant in the UK](https://res.cloudinary.com/jacobherper/image/upload/v1681652673/website-2023.png)
+![Akhmad Ramadani - Software Engineer and Consultant in the UK](https://res.cloudinary.com/jacobherper/image/upload/v1681652673/website-2023.png)
 
 This is my portfolio website, proudly built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Tailwind](https://tailwindcss.com/). The content is managed through [Sanity](https://sanity.io/). It uses the [pnpm](https://pnpm.io/) package manager by default, but can be used with `npm` or `yarn` as well.
 
