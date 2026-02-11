@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: portfolio-website
+    ports:
+      - "3395:3000"
+    environment:
+      - NODE_ENV=production
+      - GOOGLE_SHEET_URL=https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3koTMjFw4vRrkQm9QBaWRjwQLio84az1omcRx8s8ZT2zsJp24U2z2WU-FqLfb_A/pub?output=xlsx
+    restart: unless-stopped

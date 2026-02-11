@@ -11,6 +11,7 @@ export interface Profile {
   Following: number;
   'Created At': string;
   'Profile URL': string;
+  LinkedIn: string;
 }
 
 export interface Repository {

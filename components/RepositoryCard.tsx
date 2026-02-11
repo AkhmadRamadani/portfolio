@@ -9,17 +9,18 @@ interface RepositoryCardProps {
 }
 
 const languageColors: { [key: string]: string } = {
-  JavaScript: '#f1e05a',
-  TypeScript: '#2b7489',
-  Python: '#3572A5',
-  Java: '#b07219',
-  Kotlin: '#A97BFF',
-  Dart: '#00B4AB',
-  HTML: '#e34c26',
-  CSS: '#563d7c',
-  Vue: '#41b883',
-  Go: '#00ADD8',
-  Rust: '#dea584',
+  "Android Native": "#3DDC84",
+  "React Native": "#61DAFB",
+  "Jupyter Notebook": "#DA5B0B",
+  Flutter: "#02569B",
+  "Flutter Package": "#42A5F5",
+  Laravel: "#FF2D20",
+  FastAPI: "#009688",
+  "React JS": "#61DAFB",
+  JavaScript: "#f1e05a",
+  Python: "#3572A5",
+  Dart: "#00B4AB",
+  "PHP SLIM 3": "#777BB4",
 };
 
 export default function RepositoryCard({ repo, index }: RepositoryCardProps) {

@@ -65,6 +65,7 @@ export default function Hero({ profile }: HeroProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
         >
+          {/* GitHub Button */}
           <a
             href={profile['Profile URL']}
             target="_blank"
@@ -73,6 +74,20 @@ export default function Hero({ profile }: HeroProps) {
           >
             View GitHub Profile
           </a>
+
+          {/* LinkedIn Button */}
+          {profile.LinkedIn && (
+            <a
+              href={profile.LinkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-sky-500 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105"
+            >
+              View LinkedIn Profile
+            </a>
+          )}
+
+          {/* Blog Button */}
           {profile.Blog && (
             <a
               href={profile.Blog}
@@ -85,25 +100,6 @@ export default function Hero({ profile }: HeroProps) {
           )}
         </motion.div>
 
-        <motion.div
-          className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: 'easeOut' }}
-        >
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gradient">{profile['Public Repos']}</div>
-            <div className="text-gray-400 mt-2">Repositories</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gradient">{profile.Followers}</div>
-            <div className="text-gray-400 mt-2">Followers</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gradient">{profile.Following}</div>
-            <div className="text-gray-400 mt-2">Following</div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

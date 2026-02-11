@@ -4,11 +4,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================================
+   GLOBAL THEME VARIABLES
+================================ */
 :root {
-  --font-display: 'Playfair Display', serif;
-  --font-sans: 'IBM Plex Sans', sans-serif;
+  /* Fonts */
+  --font-display: "Playfair Display", serif;
+  --font-sans: "IBM Plex Sans", sans-serif;
+
+  /* Background Gradient */
+  --bg-1: #0a0e27;
+  --bg-2: #1a1f3a;
+  --bg-3: #2d1b3d;
+
+  /* Text Colors */
+  --text-main: #e8e8f0;
+  --text-muted: rgba(232, 232, 240, 0.7);
+
+  /* Accent Gradient (Brand Colors) */
+  --accent-1: #667eea;
+  --accent-2: #764ba2;
+  --accent-3: #f093fb;
+
+  /* Card Styling */
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.1);
+
+  /* Glow Effects */
+  --glow-border-1: rgba(102, 126, 234, 0.35);
+  --glow-border-2: rgba(118, 75, 162, 0.35);
+  --glow-shadow: rgba(102, 126, 234, 0.25);
+
+  /* UI Effects */
+  --blur-strength: blur(12px);
+  --transition-speed: 0.3s ease;
 }
 
+/* ================================
+   RESET + BASE
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -17,48 +51,82 @@
 
 body {
   font-family: var(--font-sans);
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d1b3d 100%);
-  color: #e8e8f0;
+
+  background: linear-gradient(
+    135deg,
+    var(--bg-1) 0%,
+    var(--bg-2) 50%,
+    var(--bg-3) 100%
+  );
+
+  color: var(--text-main);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
+/* ================================
+   UTILITIES
+================================ */
 @layer utilities {
+  /* ---------- Gradient Text ---------- */
   .text-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(
+      135deg,
+      var(--accent-1) 0%,
+      var(--accent-2) 50%,
+      var(--accent-3) 100%
+    );
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
+  /* ---------- Glow Card ---------- */
   .glow-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+
+    background: var(--card-bg);
+    backdrop-filter: var(--blur-strength);
+
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+
+    transition: all var(--transition-speed);
+    overflow: hidden;
   }
 
+  /* Glow Border Layer */
   .glow-card::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
+
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+
+    background: linear-gradient(
+      135deg,
+      var(--glow-border-1),
+      var(--glow-border-2)
+    );
+
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-speed);
   }
 
+  /* Hover Effects */
   .glow-card:hover::before {
     opacity: 1;
   }
 
   .glow-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px var(--glow-shadow);
   }
 }
