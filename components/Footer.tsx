@@ -73,7 +73,7 @@ export default function Footer({ profile }: FooterProps) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mt-8 text-gray-500 text-sm"
         >
-          <p>© {new Date().getFullYear()} {profile.Name}. Built with Next.js & TypeScript.</p>
+          <p>© {new Date().getFullYear()} {profile.Name}. All rights reserved</p>
         </motion.div>
       </div>
     </footer>

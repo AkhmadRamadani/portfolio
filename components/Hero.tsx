@@ -84,7 +84,7 @@ export default function Hero({ profile }: HeroProps) {
             </a>
           )}
         </motion.div>
-
+{/* 
         <motion.div
           className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
@@ -103,7 +103,7 @@ export default function Hero({ profile }: HeroProps) {
             <div className="text-4xl font-bold text-gradient">{profile.Following}</div>
             <div className="text-gray-400 mt-2">Following</div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
