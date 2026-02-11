@@ -74,6 +74,29 @@ portfolio-website/
 
 ```
 
+## Using Google Sheets
+
+You can also load data directly from a Google Sheet. This allows you to update your portfolio by simply editing the spreadsheet.
+
+1. **Prepare your Google Sheet**:
+   - Create a Google Sheet with the same structure as the local Excel file (sheets named "Profile" and "Repositories").
+   - Fill in your data.
+
+2. **Publish to the Web**:
+   - Go to `File` > `Share` > `Publish to web`.
+   - Select "Entire Document" and "Microsoft Excel (.xlsx)".
+   - Click "Publish" and copy the generated link.
+
+3. **Configure Environment Variable**:
+   - Create a `.env.local` file in the root of the project.
+   - Add the following line, replacing the URL with your published sheet URL:
+     ```env
+     GOOGLE_SHEET_URL=https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID/pub?output=xlsx
+     ```
+   - Restart the development server.
+
+Now the application will fetch data from your Google Sheet. It will automatically revalidate the data every 60 seconds.
+
 ## Data Format
 
 The Excel file should contain two sheets:

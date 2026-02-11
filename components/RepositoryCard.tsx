@@ -75,13 +75,24 @@ export default function RepositoryCard({ repo, index }: RepositoryCardProps) {
           href={repo.URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 text-sm font-medium"
+          className="relative z-10 text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 text-sm font-medium"
         >
           View
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
           </svg>
         </a>
+
       </div>
     </motion.div>
   );
