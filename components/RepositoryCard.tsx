@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import type { Repository } from '@/types/github';
 
 interface RepositoryCardProps {
@@ -35,8 +36,10 @@ export default function RepositoryCard({ repo, index }: RepositoryCardProps) {
       className="glow-card rounded-2xl p-6 h-full flex flex-col"
     >
       <div className="flex items-start justify-between mb-4">
-        <h3 className="font-semibold text-xl text-white flex-1 line-clamp-1">
-          {repo['Repository Name']}
+        <h3 className="font-semibold text-xl text-white flex-1 line-clamp-1 hover:text-purple-400 transition-colors">
+          <Link href={`/projects/${encodeURIComponent(repo['Repository Name'])}`}>
+            {repo['Repository Name']}
+          </Link>
         </h3>
         <div className="flex gap-3 ml-4">
           {repo.Stars > 0 && (
@@ -72,28 +75,35 @@ export default function RepositoryCard({ repo, index }: RepositoryCardProps) {
             <span className="text-sm text-gray-400">{repo.Language}</span>
           </div>
         )}
-        <a
-          href={repo.URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative z-10 text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 text-sm font-medium"
-        >
-          View
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+        <div className="flex gap-4">
+          <Link
+            href={`/projects/${encodeURIComponent(repo['Repository Name'])}`}
+            className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
-        </a>
-
+            Details
+          </Link>
+          <a
+            href={repo.URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1 text-sm font-medium"
+          >
+            View
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </motion.div>
   );

@@ -118,6 +118,7 @@ body {
 
     opacity: 0;
     transition: opacity var(--transition-speed);
+    pointer-events: none;
   }
 
   /* Hover Effects */
