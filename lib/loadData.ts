@@ -32,8 +32,21 @@ export async function loadGitHubData(): Promise<GitHubData> {
   const profileData = XLSX.utils.sheet_to_json<Profile>(profileSheet);
   const repositoriesData = XLSX.utils.sheet_to_json<Repository>(reposSheet);
 
+  // Helper to safely convert Date objects to strings
+  const sanitize = (obj: any): any => {
+    if (!obj) return obj;
+    const newObj = { ...obj };
+    Object.keys(newObj).forEach((key) => {
+      const value = newObj[key];
+      if (value instanceof Date) {
+        newObj[key] = value.toISOString();
+      }
+    });
+    return newObj;
+  };
+
   return {
-    profile: profileData[0],
-    repositories: repositoriesData,
+    profile: sanitize(profileData[0]),
+    repositories: repositoriesData.map(sanitize),
   };
 }
